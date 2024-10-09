@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Lâmpada</title>
+</head>
+
+<body>
+    <h1>Controle de Lâmpada</h1>
+    <img id="imagem" src="images/lampada-desligada.png" alt="">
+    <p id="lamp"></p>
+
+    <button onclick="botao()">Ligar/Desligar</button>
+    <script>
+        let estaligado = false
+
+        function botao() {
+            let lampada = document.getElementById("imagem")
+
+            if (estaligado) {
+                lampada.src = "images/lampada-desligada.png"
+                estaligado = false
+                document.getElementById("lamp").innerText = "Lâmpada Desligada" 
+
+            } else {
+                lampada.src = "images/lampada-ligada.png"
+                estaligado = true
+                document.getElementById("lamp").innerText = "Lâmpada ligada"
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
